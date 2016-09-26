@@ -24,7 +24,9 @@ void
 help(
   const char *program_name)
 {
-  printf("Usage: %s [-d <delay>] <text>", program_name);
+  printf("Usage: %s [options] <text>\n", program_name);
+  printf("  Options:\n");
+  printf("    -d, --delay <delay>: delay in milliseconds between each character\n");
 }
 
 int
