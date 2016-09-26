@@ -42,17 +42,21 @@ main(
   int delay = DEFAULT_DELAY_BETWEEN_CHARS;
   int argsToPrint = 1;
 
+  // Do we have the delay option?
   if (strcmp(argv[1], "--delay") == 0 ||
       strcmp(argv[1], "-d") == 0) {
 
+    // Parse the delay
     delay = atoi(argv[2]);
 
     argsToPrint += 2;
   }
 
+  // Iterate over the remaining arguments
   for (int i = argsToPrint; i < argc; i++) {
     print((char *)argv[i], delay);
 
+    // Keep a space between arguments
     if (i < argc - 1) {
       printf(" ");
     }
